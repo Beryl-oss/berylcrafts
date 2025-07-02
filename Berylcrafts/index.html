@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Masséna Béryl | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style-index.css" />
+  <!-- Lien CDN Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!--GOOGLE ANALYSTICS-->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXX"></script>
+</head>
+<body>
+
+ <header id="header">
+    <svg class="logo-svg" viewBox="0 0 400 60" preserveAspectRatio="xMinYMid meet" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="violetGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#d59cf6"/>
+          <stop offset="100%" stop-color="#7a4fcf"/>
+        </linearGradient>
+        <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+          <feDropShadow dx="2" dy="2" stdDeviation="2" flood-color="black" flood-opacity="0.7"/>
+        </filter>
+      </defs>
+      <text x="0" y="45"
+            font-family="Arial, sans-serif"
+            font-size="48"
+            font-weight="bold"
+            fill="url(#violetGradient)"
+            stroke="white"
+            stroke-width="1"
+            filter="url(#shadow)">
+        Masséna Béryl
+      </text>
+    </svg>
+    <img src="hamburger.png"
+    alt="hamburger menu"
+    id="hamburger"
+    class="hamburger"
+    onclick="handleNavbarHamburger()">
+    <img src="cross-img.png"
+   alt="hamburger menu"
+   id="cross-img"
+   class="cross-img"
+   onclick="handleNavbarCrossImg()">
+
+
+    <nav class="navbar" id="navbar">
+      <ul>
+        <li><a onclick="selectActive()" href="index.html">Acceuil</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="realisations.html">Réalisations</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="buttons">
+      <button onclick="handleContact()">Call now</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+   <section class="hero">
+  <div class="hero-container">
+    <div class="hero-text">
+      <h1>Bienvenue !<br>Je suis <span>Masséna Béryl</span></h1>
+     <p> Je suis un jeune développeur web de 13 ans, animé par la passion du code et du design. Je conçois des interfaces à la fois modernes, esthétiques et optimisées.</p>
+      <div class="hero-buttons">
+        <button onclick="handleContact()">Contactez-moi</button>
+        <a href="realisations.html" class="hero-btn">Voir mes projets</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="hero-img.jpg" alt="Massena Beryl" />
+    </div>
+  </div>
+</section>
+  <section class="pro-road">
+  <h2>Parcours Professionnel</h2>
+  <div class="roads">
+
+    <div class="road">
+      <h3>2020 - 2021</h3>
+      <div class="road-container">
+        <h4>Premiers pas avec <span>HTML & CSS</span></h4>
+        <p>Tout a commencé par la découverte du HTML et du CSS. J’ai appris à structurer une page web, à styliser des éléments, et à donner vie à mes premières interfaces. Cette phase a marqué la naissance de ma passion pour le développement web.</p>
+      </div>
+    </div>
+
+    <div class="road">
+      <h3>2021 - 2022</h3>
+      <div class="road-container">
+        <h4>Interactivité avec <span>JavaScript</span></h4>
+        <p>Fort de mes bases en HTML/CSS, j’ai voulu rendre mes sites plus interactifs. JavaScript s’est imposé comme une évidence. J’y ai découvert les variables, les fonctions, les événements… bref, les bases de la programmation dynamique côté client.</p>
+      </div>
+    </div>
+
+    <div class="road">
+      <h3>2022 - 2024</h3>
+      <div class="road-container">
+        <h4>Exploration du backend avec <span>Python</span></h4>
+        <p>Ma curiosité m’a poussé à explorer l’envers du décor : le backend. Avec Python, j’ai appris à créer des serveurs, manipuler des bases de données, et développer des APIs. Cela m’a permis de mieux comprendre l’architecture complète d’une application web.</p>
+      </div>
+    </div>
+
+    <div class="road">
+      <h3>2024 - Aujourd’hui</h3>
+      <div class="road-container">
+        <h4>Maîtrise du frontend moderne avec <span>React</span> et initiation au mobile avec <span>Flutter</span></h4>
+        <p>Je perfectionne aujourd’hui mes compétences en React, en développant des interfaces dynamiques, réactives et maintenables. En parallèle, je découvre le développement mobile avec Flutter, ce qui m’ouvre les portes du monde des applications multiplateformes.</p>
+      </div>
+    </div>
+
+  </div>
+    <div class="skills">
+  <h2>Compétences Techniques</h2>
+
+  <div class="skill">
+    <label>HTML</label>
+    <div class="progress-bar">
+      <div class="progress"  data-percent="95%"></div>
+    </div>
+  </div>
+
+  <div class="skill">
+    <label>CSS</label>
+    <div class="progress-bar">
+      <div class="progress" data-percent="90%"></div>
+    </div>
+  </div>
+
+  <div class="skill">
+    <label>JavaScript</label>
+    <div class="progress-bar">
+      <div class="progress"  data-percent="65%"></div>
+    </div>
+  </div>
+
+  <div class="skill">
+    <label>Python (Backend)</label>
+    <div class="progress-bar">
+      <div class="progress"  data-percent="50%"></div>
+    </div>
+
+  <div class="skill">
+    <label>React</label>
+    <div class="progress-bar">
+      <div class="progress"  data-percent="25%"></div>
+    </div>
+  </div>
+
+   <div class="skill">
+    <label>Flutter</label>
+    <div class="progress-bar">
+      <div class="progress"  data-percent="15%"></div>
+    </div>
+  </div>
+
+  </div>
+</div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <h3>Masséna <span>Béryl</span></h3>
+      <p>Développeur web passionné par le code, le design et l’innovation numérique.</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="realisations.html">Réalisations</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+   <div class="footer-social">
+  <h4>Suivez-moi</h4>
+  <div class="social-icons">
+    <a href="https://github.com/tonprofil" target="_blank" aria-label="GitHub">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 0.5C5.375 0.5 0 5.875 0 12.5C0 17.812 3.438 22.25 8.207 23.792C8.805 23.902 9.02 23.547 9.02 23.234C9.02 22.953 9.008 22.183 9.004 21.207C5.672 21.891 4.968 19.672 4.968 19.672C4.43 18.297 3.672 17.945 3.672 17.945C2.602 17.227 3.754 17.242 3.754 17.242C4.938 17.332 5.57 18.469 5.57 18.469C6.633 20.281 8.414 19.766 9.094 19.453C9.207 18.707 9.5 18.195 9.828 17.891C7.164 17.586 4.359 16.508 4.359 11.781C4.359 10.453 4.828 9.383 5.617 8.555C5.492 8.25 5.078 6.984 5.727 5.27C5.727 5.27 6.742 4.93 8.984 6.383C9.945 6.102 10.977 5.961 12.004 5.953C13.031 5.961 14.062 6.102 15.023 6.383C17.262 4.93 18.273 5.27 18.273 5.27C18.922 6.984 18.508 8.25 18.383 8.555C19.172 9.383 19.641 10.453 19.641 11.781C19.641 16.523 16.828 17.578 14.156 17.875C14.578 18.266 14.961 19.016 14.961 20.18C14.961 21.836 14.945 22.922 14.945 23.234C14.945 23.547 15.156 23.906 15.77 23.785C20.543 22.242 24 17.805 24 12.5C24 5.875 18.625 0.5 12 0.5Z"/>
+      </svg>
+    </a>
+
+    <a href="https://linkedin.com/in/tonprofil" target="_blank" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4.98 3.5C4.98 4.88071 3.88071 6 2.5 6C1.11929 6 0 4.88071 0 3.5C0 2.11929 1.11929 1 2.5 1C3.88071 1 4.98 2.11929 4.98 3.5ZM0.25 24H4.75V7.75H0.25V24ZM7.25 7.75H11.5V9.75H11.56C12.11 8.64 13.43 7.5 15.44 7.5C19.5 7.5 20 10.13 20 13.47V24H15.5V14.25C15.5 12.33 15.46 9.97 13.25 9.97C11 9.97 10.68 11.9 10.68 14.12V24H6.25V7.75H7.25Z"/>
+      </svg>
+    </a>
+
+    <a href="https://twitter.com/tonprofil" target="_blank" aria-label="Twitter">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28" xmlns="http://www.w3.org/2000/svg">
+        <path d="M22.46 6.01C21.69 6.36 20.86 6.6 20 6.71C20.88 6.16 21.54 5.29 21.86 4.26C21.03 4.76 20.11 5.12 19.14 5.33C18.36 4.48 17.23 4 16 4C13.66 4 11.76 5.9 11.76 8.24C11.76 8.58 11.79 8.91 11.86 9.22C8.727 9.047 5.973 7.489 4.1 5.118C3.75 5.746 3.54 6.472 3.54 7.24C3.54 8.71 4.3 9.99 5.42 10.76C4.71 10.74 4.05 10.54 3.48 10.2V10.25C3.48 12.3 4.98 14.04 6.93 14.43C6.42 14.57 5.88 14.62 5.33 14.62C4.91 14.62 4.5 14.58 4.1 14.5C4.93 16.21 6.58 17.39 8.5 17.42C6.99 18.51 5.1 19.12 3.07 19.12C2.72 19.12 2.37 19.1 2.02 19.06C3.97 20.21 6.25 20.88 8.7 20.88C16 20.88 20.5 14.78 20.5 8.76C20.5 8.58 20.5 8.4 20.49 8.23C21.32 7.63 22.04 6.86 22.46 6.01Z"/>
+      </svg>
+    </a>
+  </div>
+</div>
+
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Masséna Béryl. Tous droits réservés.</p>
+  </div>
+</footer>
+
+  </main>
+
+  <script src="script-index.js"></script>
+
+</body>
+</html>

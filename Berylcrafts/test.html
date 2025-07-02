@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Test SVG Dégradé Texte</title>
+  <style>
+    body {
+      background: #222;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <svg width="400" height="60" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="violetGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#8e2de2"/>
+        <stop offset="100%" stop-color="#4a00e0"/>
+      </linearGradient>
+    </defs>
+    <text x="0" y="45" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="url(#violetGradient)">
+      Massena Beryl
+    </text>
+  </svg>
+
+</body>
+</html>

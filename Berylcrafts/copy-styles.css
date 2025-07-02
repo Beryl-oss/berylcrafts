@@ -1,0 +1,337 @@
+
+  html{
+	  scroll-behavior: smooth;
+  }
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #ffffff;
+}
+
+header {
+  background: transparent;
+  padding: 60px 20px;
+  text-align: center;
+  background-image: url('header-background.jpeg');
+  background-size: cover;
+  background-position: center;
+}
+
+header h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+header p {
+  font-size: 1.2em;
+  color: #dddddd;
+
+}
+nav {
+  white-space: nowrap;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 15px 0;
+  text-align: center;
+  top: 0;
+  transition: 0.3s;
+  z-index: 1000;
+  position: sticky;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+nav a {
+  position: relative;
+  display: inline-block;
+  padding: 9px 18px;
+  color: #ffffff;
+  margin: 0 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, padding-bottom 0.3s ease;
+  border-bottom: 2px solid transparent; /* Transparent border initially */
+  transition: border-color 0.3s ease, padding-bottom 0.3s ease;
+}
+
+nav a:hover {
+  color: #fff; 
+  padding-bottom: 5px; 
+  border-color: #7f00ff;
+}
+
+nav a.active {
+  background-color: #7f00ff;
+  border-radius: 5px;
+  border-bottom: none; 
+  text-decoration: none;
+}
+	  
+nav a:hover::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background-color: #7f00ff;
+  border-radius: 2px;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+nav a.active::after {
+  content: none; 
+}
+
+section {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 40px auto;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+h2 {
+  font-family: 'Poppins', sans-serif;
+  color: #00bcd4;
+  margin-bottom: 20px;
+}
+
+ul, ol {
+  line-height: 1.8;
+}
+
+footer {
+  background: none;
+  color: #cccccc;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9em;
+ }
+ .footer-link-container{
+	display:flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap:10px;
+} 
+.link-container img {
+  transition: transform 0.3s ease;
+}
+
+.link-container img:hover {
+  transform: scale(1.1);
+}
+.footer-link-container .github-img {
+  width: 24px;
+  height: 24px;
+  filter: invert(1) drop-shadow(0 0 2px #00bcd4);
+  animation: githubPulse 4s ease-in-out infinite;
+}
+
+/* WhatsApp effet vert doux */
+.footer-link-container .whatsapp-img {
+  width: 16px;
+  height: 16px;
+  filter: drop-shadow(0 0 2px #25d366);
+  animation: whatsappPulse 4s ease-in-out infinite;
+}
+
+/* Mail effet blanc néon */
+.footer-link-container .mail-img {
+  width: 27px;
+  height: 27px;
+  filter: invert(1) drop-shadow(0 0 2px #ffffff);
+  animation: mailPulse 4s ease-in-out infinite;
+}
+.logo-container{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	gap: 10px;
+}
+.logo{
+	width:90px;
+	height:90px;
+}
+ .tech{
+  font-family: 'Poppins', sans-serif;
+  left: 70px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  background: linear-gradient(270deg, #0f2027, #203a43, #2c5364, #ffffff);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: cosmicGradient 8s ease infinite, sparkle 1.5s infinite alternate;
+}
+
+/* Animation dégradé cosmique */
+@keyframes cosmicGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Scintillement doux */
+@keyframes sparkle {
+  0% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+  }
+  100% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+  }
+}
+.link-container{
+	display: none;
+} 
+
+.shiru{
+	font-family: 'Poppins', sans-serif;
+	float: right;
+	margin-right:15px;
+}
+ @media screen and (max-width: 600px) {
+ .logo-container{
+	 display: flex;
+	 flex-direction: column;
+	 gap:5px;
+ }
+	  nav{
+		  position: relative;
+		  background: none;
+	  }
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  text-align: center;
+  margin: 6px 0;
+  font-weight: bold;
+}
+/* Les icônes sous les liens */
+
+	
+.link-container {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  right: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+.footer-link-container a{
+	text-decoration: none;
+}
+
+.link-container img {
+  transition: transform 0.3s ease;
+}
+
+.link-container img:hover {
+  transform: scale(1.1);
+}
+
+/* GitHub effet bleu futuriste */
+.github-img {
+  width: 24px;
+  height: 24px;
+  filter: invert(1) drop-shadow(0 0 2px #00bcd4);
+  animation: githubPulse 4s ease-in-out infinite;
+}
+
+/* WhatsApp effet vert doux */
+.whatsapp-img {
+  width: 16px;
+  height: 16px;
+  filter: drop-shadow(0 0 2px #25d366);
+  animation: whatsappPulse 4s ease-in-out infinite;
+}
+
+/* Mail effet blanc néon */
+.mail-img {
+  width: 27px;
+  height: 27px;
+  filter: invert(1) drop-shadow(0 0 2px #ffffff);
+  animation: mailPulse 4s ease-in-out infinite;
+}
+.footer-link-container{
+	display:flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap:10px;
+} 
+.link-container img {
+  transition: transform 0.3s ease;
+}
+
+.link-container img:hover {
+  transform: scale(1.1);
+}
+.footer-link-container .github-img {
+  width: 24px;
+  height: 24px;
+  filter: invert(1) drop-shadow(0 0 2px #00bcd4);
+  animation: githubPulse 4s ease-in-out infinite;
+}
+
+/* WhatsApp effet vert doux */
+.footer-link-container .whatsapp-img {
+  width: 16px;
+  height: 16px;
+  filter: drop-shadow(0 0 2px #25d366);
+  animation: whatsappPulse 4s ease-in-out infinite;
+}
+
+/* Mail effet blanc néon */
+.footer-link-container .mail-img {
+  width: 27px;
+  height: 27px;
+  filter: invert(1) drop-shadow(0 0 2px #ffffff);
+  animation: mailPulse 4s ease-in-out infinite;
+}
+}
+
+	  @media screen and (max-width: 617px){
+	nav{
+		white-space: nowrap;
+	}
+}
+	  
+ 
+  
