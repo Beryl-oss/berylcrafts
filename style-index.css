@@ -712,9 +712,9 @@ html{
   .cross-img {
     filter: invert(1);
     display: none;
-    position: absolute;
+    position: static;
     top: 1px;
-    right: 5px;
+    right: 10px;
     width: 55px;
     cursor: pointer;
     z-index: 999;
