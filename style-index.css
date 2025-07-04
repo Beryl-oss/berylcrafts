@@ -702,7 +702,7 @@ html{
   .hamburger {
     filter: invert(1);
     display: block;
-    position: absolute;
+    position: static;
     top: 15px;
     right: 40px;
     width: 30px;
