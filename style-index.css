@@ -714,7 +714,7 @@ html{
     display: none;
     position: static;
     top: 1px;
-    right: 2px;
+    right: 40px;
     width: 55px;
     cursor: pointer;
     z-index: 999;
