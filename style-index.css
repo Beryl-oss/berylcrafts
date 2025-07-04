@@ -135,7 +135,6 @@ header {
   justify-content: center;
   background: radial-gradient(circle at top left, #4c0070, #1e002e);
   color: white;
-  margin-top: 10px;
   padding: 40px 20px;
   text-align: left;
 }
@@ -157,6 +156,7 @@ header {
 }
 
 .hero-text h1 {
+  margin-top: 10px;
   font-size: 3em;
   margin-bottom: 20px;
 }
