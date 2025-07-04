@@ -1,22 +1,45 @@
 <?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'phpmailer/PHPMailer.php';
+require 'phpmailer/SMTP.php';
+require 'phpmailer/Exception.php';
+
+header('Content-Type: application/json');
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $nom = htmlspecialchars(trim($_POST["name"])); // "name" ici correspond à name="name"
+    $nom = htmlspecialchars(trim($_POST["name"]));
     $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
     $message = htmlspecialchars(trim($_POST["message"]));
 
-    $destinataire = "massenajonas256@gmail.com";
-    $sujet = "Nouveau message du formulaire de contact";
+    $mail = new PHPMailer(true);
 
-    $contenu = "Nom: $nom\n";
-    $contenu .= "Email: $email\n";
-    $contenu .= "Message:\n$message";
+    try {
+        $mail->isSMTP();
+        $mail->Host = 'smtp.gmail.com';
+        $mail->SMTPAuth = true;
+        $mail->Username = 'massenajonas256@gmail.com'; 
+        $mail->Password = 'mot_de_passe_app'; 
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+        $mail->Port = 465;
 
-    $headers = "From: $nom <$email>";
+        $mail->setFrom($email, $nom);
+        $mail->addAddress('massenajonas256@gmail.com');
 
-    if (mail($destinataire, $sujet, $contenu, $headers)) {
-        echo "Nos Félicitations !!! Votre message a été envoyé avec succès.";
-    } else {
-        echo "Une erreur s'est produite lors de l'envoi du message.";
+        $mail->Subject = 'Nouveau message du formulaire de contact';
+        $mail->Body    = "Nom: $nom\nEmail: $email\n\nMessage:\n$message";
+
+        $mail->send();
+        echo json_encode([
+            "success" => true,
+            "message" => "✅ Merci ! Votre message a bien été envoyé."
+        ]);
+    } catch (Exception $e) {
+        echo json_encode([
+            "success" => false,
+            "message" => "❌ Le message n’a pas pu être envoyé. Erreur : {$mail->ErrorInfo}"
+        ]);
     }
 }
 ?>
