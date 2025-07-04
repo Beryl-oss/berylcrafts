@@ -288,10 +288,11 @@ header {
   margin: 0 5px;
   background-color: gray;
   border-radius: 50%;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, width 0.4s ease;
 }
 
 .dot.active{
+  width: 8px;
   background-color: white;
 }
 
