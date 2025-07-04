@@ -42,25 +42,44 @@ function handleContact() {
   }, 600);
 }
 
-// ——————————————— FORM VALIDATION avec confirmation animée ———————————————
+// ——————————————— FORM VALIDATION  ———————————————
 form.addEventListener('submit', function(event) {
   event.preventDefault();
 
-  if (!form.name.value.trim() || !form.email.value.trim() || !form.message.value.trim()) {
+  const name = form.name.value.trim();
+  const email = form.email.value.trim();
+  const message = form.message.value.trim();
+
+  if (!name || !email || !message) {
     messageBox.textContent = "Merci de remplir tous les champs.";
     messageBox.style.color = "#ff6666";
     messageBox.style.opacity = "1";
     return;
   }
 
-  messageBox.textContent = "✅ Merci pour votre message, je vous recontacte rapidement !";
-  messageBox.style.color = "#b0f7c0";
-  messageBox.style.opacity = "1";
-  form.reset();
+  const formData = new FormData(form);
 
-  setTimeout(() => {
-    messageBox.style.opacity = "0";
-  }, 5000);
+  fetch('process_form.php', {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => response.json())
+  .then(data => {
+    messageBox.textContent = data.message;
+    messageBox.style.color = data.success ? "#b0f7c0" : "#ff6666";
+    messageBox.style.opacity = "1";
+
+    if (data.success) form.reset();
+
+    setTimeout(() => {
+      messageBox.style.opacity = "0";
+    }, 5000);
+  })
+  .catch(error => {
+    messageBox.textContent = "❌ Une erreur inattendue est survenue.";
+    messageBox.style.color = "#ff6666";
+    messageBox.style.opacity = "1";
+  });
 });
 
 // ——————————————— MACHINE À ÉCRIRE POUR LE TITRE ———————————————
