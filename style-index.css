@@ -713,7 +713,7 @@ html{
     filter: invert(1);
     display: none;
     position: absolute;
-    top: 10px;
+    top: 2px;
     right: 10px;
     width: 55px;
     cursor: pointer;
