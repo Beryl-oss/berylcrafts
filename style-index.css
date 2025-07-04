@@ -712,7 +712,7 @@ html{
   .cross-img {
     filter: invert(1);
     display: none;
-    position: static;
+    position: relative;
     top: 1px;
     right: 40px;
     width: 55px;
