@@ -65,7 +65,7 @@ form.addEventListener('submit', function(event) {
   })
   .then(response => response.json())
   .then(data => {
-    messageBox.textContent = data.message;
+    alert(JSON.stringify(data)); 
     messageBox.style.color = data.success ? "#b0f7c0" : "#ff6666";
     messageBox.style.opacity = "1";
 
