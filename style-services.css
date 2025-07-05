@@ -235,7 +235,7 @@ header {
 
 .modal-overlay .modal-content {
   animation: fadeInPro 0.5s ease-in-out;
-  background-color: rgba(0, 0, 0.7, 0.9);
+  background-color: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(5px);
   padding: 2rem;
   border-radius: 8px;
