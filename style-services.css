@@ -219,6 +219,7 @@ header {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.7);
+  backdro-filter: blur(5px);
   justify-content: center;
   align-items: center;
   z-index: 1000;
@@ -230,7 +231,6 @@ header {
 
 .modal-overlay .modal-content {
   animation: fadeInPro 0.5s ease-in-out;
-  background: #fff;
   padding: 2rem;
   border-radius: 8px;
   max-width: 500px;
