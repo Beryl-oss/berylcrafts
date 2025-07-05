@@ -223,6 +223,10 @@ header {
   z-index: 1000;
 }
 
+.modal-overlay h2 {
+  color: #d59cf6;
+}
+
 .modal-overlay .modal-content {
   background: #fff;
   padding: 2rem;
