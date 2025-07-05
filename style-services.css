@@ -214,7 +214,6 @@ header {
 }
 
 .modal-overlay {
-  animation: fadeInPro 0.5s ease-in-out;
   color: black;
   display: none;
   position: fixed;
@@ -230,6 +229,7 @@ header {
 }
 
 .modal-overlay .modal-content {
+  animation: fadeInPro 0.5s ease-in-out;
   background: #fff;
   padding: 2rem;
   border-radius: 8px;
