@@ -214,7 +214,7 @@ header {
 }
 
 .modal-overlay {
-  color: black;
+  color: white;
   display: none;
   position: fixed;
   inset: 0;
