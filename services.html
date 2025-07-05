@@ -103,6 +103,15 @@
     </article>
   </div>
 
+      <!-- Modal Overlay -->
+<div id="serviceModal" class="modal-overlay">
+  <div class="modal-content">
+    <img src="cross-img.png" alt="Fermer" class="close-icon" onclick="closeModal()" />
+    <h2 id="modalTitle"></h2>
+    <p id="modalText"></p>
+  </div>
+</div>
+
  <section class="why-choose-me">
   <h2>Pourquoi me faire confiance ?</h2>
   <ul class="advantages-list">
@@ -174,5 +183,40 @@
 
 
 </body>
+<script>
+  const serviceDetails = {
+    0: {
+      title: "Développement Web",
+      text: "Nous concevons des sites web modernes, adaptatifs (responsive) et optimisés SEO. Parfait pour attirer vos clients et augmenter votre visibilité en ligne."
+    },
+    1: {
+      title: "UI/UX Design",
+      text: "Nous créons des interfaces esthétiques et ergonomiques qui garantissent une navigation intuitive et plaisante à vos utilisateurs."
+    },
+    2: {
+      title: "Maintenance",
+      text: "Notre service de maintenance vous garantit des sites toujours fonctionnels, avec des mises à jour régulières et un support technique réactif."
+    },
+    3: {
+      title: "Stratégie Digitale",
+      text: "Nous vous accompagnons pour construire une stratégie digitale sur mesure qui maximise votre impact et votre croissance en ligne."
+    },
+    4: {
+      title: "Création de Contenu",
+      text: "Nous produisons des contenus visuels, textuels et vidéos de qualité pour alimenter vos réseaux et valoriser votre marque."
+    }
+  };
+
+  function handleSeeMore(index) {
+    const modal = document.getElementById('serviceModal');
+    document.getElementById('modalTitle').textContent = serviceDetails[index].title;
+    document.getElementById('modalText').textContent = serviceDetails[index].text;
+    modal.style.display = 'flex';
+  }
+
+  function closeModal() {
+    document.getElementById('serviceModal').style.display = 'none';
+  }
+</script>
 <script src="script-services.js"></script>
 </html>
