@@ -214,6 +214,7 @@ header {
 }
 
 .modal-overlay {
+  animation: fadeInPro 0.5s ease-in-out;
   color: black;
   display: none;
   position: fixed;
@@ -560,6 +561,17 @@ html{
     transform: translateY(0);
   }
  }
+
+@keyframes fadeInPro {
+  from { 
+    opacity: 0;
+    transform: scale(0.95); 
+  }
+  to { 
+    opacity: 1; 
+    transform: scale(1);
+  }
+}
 
   @media (max-width: 768px) {
   .navbar {
