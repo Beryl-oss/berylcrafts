@@ -237,8 +237,12 @@ header {
   animation: fadeIn 0.3s ease-in-out;
 }
 
+.modal-content h2{
+  color: #d59cf6;
+}
+
 .modal-content p {
-  color: blue;
+  color: black;
 }
 
 .close-icon {
