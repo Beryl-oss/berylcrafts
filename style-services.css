@@ -227,6 +227,7 @@ header {
 }
 
 .modal-content {
+  color: black;
   background: white;
   width: 70%;
   max-width: 800px;
@@ -234,6 +235,10 @@ header {
   border-radius: 10px;
   position: relative;
   animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-content p {
+  color: blue;
 }
 
 .close-icon {
