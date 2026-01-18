@@ -24,6 +24,7 @@ header {
 .logo-svg {
   animation: slideInLeft 1s ease;
   height: 100%;
+  margin-top: 0;
   max-width: 250px;
   flex-shrink: 1;
 }
@@ -31,8 +32,8 @@ header {
 
 .navbar {
   animation: fadeInRight 1s ease;
-  top: 50%;
   display: flex;
+    margin-top: 0;
   align-items: center;
   gap: 40px;
 }
@@ -742,4 +743,5 @@ html{
   }
   }
   
+
 
